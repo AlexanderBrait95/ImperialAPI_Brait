@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class controller {
-    @GetMapping("/api/centimeter?inch={inch}")
-    public double convert_inch(@PathVariable double inch){
-        return inch * 2.54;
+
+    @GetMapping("/api/centimeter/{inch}")
+    public String convert_inch(@PathVariable double inch){
+        return String.valueOf(inch * 2.54);
     }
 
-    @GetMapping("/api/meter?yard={centimeter}")
-    public double convert_centimeter(@PathVariable double centimeter){
-        return centimeter * 0.9144;
+    @GetMapping("/api/meter/{meter}")
+    public String convert_meter(@PathVariable double meter){
+        return String.valueOf(meter * 0.9144);
     }
 }
