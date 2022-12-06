@@ -13,7 +13,7 @@ class RectangleApplicationTests {
 	void convInchTest() {
 		controller cont = new controller();
 		String result = cont.convert_inch(1);
-		assertEquals(result,0.9144);
+		assertEquals(result,String.valueOf(2.54));
 
 	}
 
@@ -21,7 +21,7 @@ class RectangleApplicationTests {
 	void convMeterTest() {
 		controller cont = new controller();
 		String result = cont.convert_meter(1);
-		assertEquals(result,2.54);
+		assertEquals(result,String.valueOf(0.9144));
 
 	}
 
